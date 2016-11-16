@@ -1,6 +1,7 @@
 .DS_Store
 
 # Xcode garbage from having a workspace file in the root directory
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
