@@ -14,7 +14,7 @@
 		2C01C2EF1DDCE0C000B69463 /* AppleBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppleBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C01C2F21DDCE0C000B69463 /* AppleBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleBase.h; sourceTree = "<group>"; };
 		2C01C2F31DDCE0C000B69463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C01C3221DDCE25700B69463 /* AppleProjectCommon.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppleProjectCommon.xcconfig; sourceTree = "<group>"; };
+		2C01C3221DDCE25700B69463 /* Apple-Project-Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Apple-Project-Common.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		2C01C3211DDCE1EC00B69463 /* Configs */ = {
 			isa = PBXGroup;
 			children = (
-				2C01C3221DDCE25700B69463 /* AppleProjectCommon.xcconfig */,
+				2C01C3221DDCE25700B69463 /* Apple-Project-Common.xcconfig */,
 			);
 			name = Configs;
 			path = ../../Configs;

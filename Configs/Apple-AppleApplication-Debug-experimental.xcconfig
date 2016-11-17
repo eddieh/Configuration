@@ -1,0 +1,19 @@
+//
+//  AppleProjectCommon.xcconfig
+//  AppleBase
+//
+//  Created by Eddie Hillenbrand on 11/16/16.
+//  Copyright © 2016 Eddie Hillenbrand. All rights reserved.
+//
+
+// Example definition
+VT_USE_CONFIG = 0
+
+// C/C++/Obj-C file defines
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) VT_USE_CONFIG=$(VT_USE_CONFIG)
+
+// Preprocess Info.plist file?
+INFOPLIST_PREPROCESS = $(inherited)
+
+// Info.plist defines
+INFOPLIST_PREPROCESSOR_DEFINITIONS = $(inherited)
