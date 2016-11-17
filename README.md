@@ -56,6 +56,12 @@ Add a new scheme by selecting "New Scheme..." from the Scheme selector.
 
 ![add new scheme](https://github.com/eddieh/Configuration/blob/master/Images/xcode-new-scheme.png)
 
+Edit the scheme and set its build configuration to the new
+Configuration. If the new scheme would be useful to the rest of your
+team, select "Shared".
+
+![edit build config](https://github.com/eddieh/Configuration/blob/master/Images/xcode-build-config.png)
+
 ### Specifying a Configuration in Bash
 
     -xcconfig filename
