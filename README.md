@@ -37,6 +37,19 @@ configuration a universal default configuration is applied.
 
 ## Using Configurations
 
+If you join a team or otherwise start on a project building should be
+as easy as possible. In the ideal situation the project builds with a
+good default configuration from a single button press in an IDE or a
+single command in Bash.
+
+### Configuring Configurations in Xcode
+
+Add a new scheme
+
+[[https://github.com/eddieh/Configuration/blob/master/Images/xcode-new-scheme.png|alt=add new scheme]]
+
+### Specifying a Configuration in Bash
+
     -xcconfig filename
       Load the build settings defined in filename when building all
       targets.  These settings will override all other set- tings,
