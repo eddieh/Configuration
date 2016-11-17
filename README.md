@@ -46,7 +46,7 @@ single command in Bash.
 
 Add a new scheme
 
-[[https://github.com/eddieh/Configuration/blob/master/Images/xcode-new-scheme.png|alt=add new scheme]]
+![add new scheme](https://github.com/eddieh/Configuration/blob/master/Images/xcode-new-scheme.png)
 
 ### Specifying a Configuration in Bash
 
