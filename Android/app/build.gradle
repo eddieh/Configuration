@@ -1,7 +1,9 @@
 apply plugin: 'com.android.application'
-apply from: '../../Configs/AndroidProjectCommon.gradle'
 
 android {
+    signingConfigs {
+        // There is a implicit `debug` signing config we must use with custom build variants
+    }
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
     defaultConfig {
@@ -14,19 +16,49 @@ android {
     }
     buildTypes {
         debug {
+            // import our default base config file
+            apply from: '../../Configs/Android-Project-Common.gradle'
+
+            // usually this is implicitly set for debug, but we set it for clarity
+            debuggable true
+
+            // usually this is implicitly signed, but we explicitly sign it for clarity
+            signingConfig signingConfigs.debug
+
+            // declare build config fields
+            buildConfigField "boolean", "VT_USE_CONFIG", VTUseConfig
+        }
+        debugExpiremental {
+            // import our variant config file
+            apply from: '../../Configs/Android-AndroidProject-Debug-expiremental.gradle'
+
+            // custom build variants must be set debuggable
+            debuggable true
+
+            // custom build variants must use the implicitly defined `debug` signing config
+            signingConfig signingConfigs.debug
+
+            // declare build config fields
             buildConfigField "boolean", "VT_USE_CONFIG", VTUseConfig
         }
         release {
+            // import our default base config, this could also be a release specific config..
+            apply from: '../../Configs/Android-Project-Common.gradle'
+
+            // release specific
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
+            // declare build config fields
             buildConfigField "boolean", "VT_USE_CONFIG", VTUseConfig
         }
+    }
+    productFlavors {
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })

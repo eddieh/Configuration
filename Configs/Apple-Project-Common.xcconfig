@@ -1,10 +1,16 @@
 //
-//  AppleProjectCommon.xcconfig
-//  AppleBase
+//  Apple-Project-Common.xcconfig
 //
 //  Created by Eddie Hillenbrand on 11/16/16.
 //  Copyright © 2016 Eddie Hillenbrand. All rights reserved.
 //
+
+// This file is like a base config file (I probably should have called
+// it Apple-Project-Base.xcconfig) it can be included as a default configuration
+// in other configurations.
+//
+// In another file you can use the following syntax to include this configuration
+// #include "Apple-Project-Common.xcconfig"
 
 // Example definition
 VT_USE_CONFIG = 1

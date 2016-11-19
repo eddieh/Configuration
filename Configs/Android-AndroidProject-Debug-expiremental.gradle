@@ -1,0 +1,3 @@
+apply from: '../../Configs/Android-Project-Common.gradle'
+
+ext.VTUseConfig = "false"

@@ -1,10 +1,13 @@
 //
-//  AppleProjectCommon.xcconfig
-//  AppleBase
+//  Apple-AppleApplication-Debug-experimental.xcconfig
 //
 //  Created by Eddie Hillenbrand on 11/16/16.
 //  Copyright © 2016 Eddie Hillenbrand. All rights reserved.
 //
+
+
+// import the common configuration variable
+#include "Apple-Project-Common.xcconfig"
 
 // Example definition
 VT_USE_CONFIG = 0
