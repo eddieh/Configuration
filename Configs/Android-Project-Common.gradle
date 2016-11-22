@@ -1,1 +1,11 @@
+// This file is like a base config file, it can be included as a
+// default configuration in other configurations.
+//
+// In another file you can use the following syntax to include this configuration
+//
+//    apply from: '../../Configs/Android-Project-Common.gradle'
+//
+// The file path is relative to the build.gradle file
+
+// define build variables here
 ext.VTUseConfig = "true"
