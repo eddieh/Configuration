@@ -3,7 +3,7 @@
 This project demonstrates how to consolidate configurations for Apple
 projects and Android projects all in one place. It also demonstrates
 how in-development or temporary configurations can be kept out of the
-mainline preventing conflict with other team members. In addition
+mainline preventing conflicts with other team members. In addition
 configurations can be saved and easily applied for any number of
 scenarios such as developing, testing, debugging, staging, production,
 release, profiling and so on.
@@ -27,9 +27,12 @@ required where as terms in parentheses `()` are optional.
 Examples:
 
     Apple-AppleApplication-Common.xcconfig
-    Android-AndroidProject-Debug.gradle
     Apple-AppleApplication-Debug-experimental.xcconfig
     Apple-AppleApplication-Debug-eddie-bug-345.xcconfig
+    ...
+    Android-AndroidProject-Debug.gradle
+    Android-AndroidProject-Debug-experimental.gradle
+    ...
 
 When software is built the developer picks one of the
 configurations. The build systems for each platform applies the
@@ -62,12 +65,16 @@ team, select "Shared".
 
 ![edit build config](https://github.com/eddieh/Configuration/blob/master/Images/xcode-build-config.png)
 
-### Specifying a Configuration in Bash
+### Specifying a Configuration in Bash for Xcode
 
     -xcconfig filename
       Load the build settings defined in filename when building all
-      targets.  These settings will override all other set- tings,
+      targets.  These settings will override all other settings,
       including settings passed individually on the command line.
+
+### Configuring Configurations in Android Studio
+
+### Specifiying a Configuration in Bash for Android Builds
 
 ## How It Works
 
