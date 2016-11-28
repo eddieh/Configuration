@@ -106,7 +106,14 @@ project sync to work properly.
 
 ![project sync](https://github.com/eddieh/Configuration/blob/master/Images/as-project-sync.png)
 
+Now that the project has been sync'd the new build variant can be
+selected in Android Studio by selecting the 'Build Variants' panel and
+then selecting the desired build variant from the dropdown list.
+
+![select variant](https://github.com/eddieh/Configuration/blob/master/Images/as-select-variant.png)
+
 ### Specifiying a Configuration in Bash for Android Builds
+
 
 ## How It Works
 
