@@ -32,6 +32,7 @@ Examples:
     ...
     Android-AndroidProject-Debug.gradle
     Android-AndroidProject-Debug-experimental.gradle
+    Android-AndroidProject-Debug-eddie-bug-729.gradle
     ...
 
 When software is built the developer picks one of the
@@ -73,6 +74,37 @@ team, select "Shared".
       including settings passed individually on the command line.
 
 ### Configuring Configurations in Android Studio
+
+Start by making a copy of an existing `gradle` file in the `Configs`
+directory. Open a module's `build.gradle` file. In the file find the
+`buildTypes` and add an entry corresponding to the file you made in
+the `Configs` directory. Assuming your build variant is a debug build
+for an exiremental refactor with a corresponding config file named
+`Android-AndroidProject-Debug-expiremental.gradle` you'd name your new
+build variant `debugExpiremental`
+
+    buildTypes {
+        ...
+        debugExpiremental {
+            // import our variant config file
+            apply from: '../../Configs/Android-AndroidProject-Debug-expiremental.gradle'
+
+            // custom build variants must be set debuggable
+            debuggable true
+
+            // custom build variants must use the implicitly defined `debug` signing config
+            signingConfig signingConfigs.debug
+
+            // declare build config fields
+            buildConfigField "boolean", "VT_USE_CONFIG", VTUseConfig
+        }
+        ...
+    }
+
+Making changes to the `gradle` files in Android Studio requires a
+project sync to work properly.
+
+![project sync](https://github.com/eddieh/Configuration/blob/master/Images/as-project-sync.png)
 
 ### Specifiying a Configuration in Bash for Android Builds
 
