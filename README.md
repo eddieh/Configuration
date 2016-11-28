@@ -83,6 +83,18 @@ for an exiremental refactor with a corresponding config file named
 `Android-AndroidProject-Debug-expiremental.gradle` you'd name your new
 build variant `debugExpiremental`
 
+There are four important parts in the build type for our purposes. The
+first important part is the line that imports our configuration using
+the `apply from:` form. The second important part is setting the
+variant to be debuggable by adding `debuggable true`. Third the build
+type must be set to use the implicit signing config for debug builds
+`signingConfig signingConfigs.debug`. The fourth part is to define all
+the build config variables the build type will use. This is done by
+adding lines of the form `buildConfigField "type",
+"NAME_OF_VAR_IN_JAVA", "NameOfVar"`
+
+A sample build type block follows:
+
     buildTypes {
         ...
         debugExpiremental {
